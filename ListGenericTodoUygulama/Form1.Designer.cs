@@ -54,6 +54,7 @@
             this.pnlIslemListesi.Name = "pnlIslemListesi";
             this.pnlIslemListesi.Size = new System.Drawing.Size(226, 609);
             this.pnlIslemListesi.TabIndex = 1;
+            this.pnlIslemListesi.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlIslemListesi_Paint);
             // 
             // pictureBox1
             // 
@@ -133,6 +134,7 @@
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Todo - Uygulaması 2023";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlIslemListesi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpBoxIslemListe.ResumeLayout(false);
