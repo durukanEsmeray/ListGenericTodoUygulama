@@ -50,5 +50,10 @@ namespace ListGenericTodoUygulama
         {
             lblZaman.Text = DateTime.Now.ToString("dd.MM.yyyy hh:mm");
         }
+
+        private void btnUygulamaKapat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

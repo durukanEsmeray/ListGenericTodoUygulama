@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ListGenericTodoUygulama.businessService;
+using ListGenericTodoUygulama.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +35,27 @@ namespace ListGenericTodoUygulama
         {
             if(!string.IsNullOrEmpty(txtKullaniciAdi.Text) || !string.IsNullOrEmpty(txtSifre.Text))
             {
-
+                kullaniciServis kullaniciService = new kullaniciServis();
+                kullanici kontrolKullanici = kullaniciService.kullaniciKontrol(txtKullaniciAdi.Text, txtSifre.Text);
+                if(kontrolKullanici != null)
+                {
+                    Form anaForm = Application.OpenForms["Form1"];
+                    Panel solPanel = (Panel)anaForm.Controls["pnlIslemListesi"];
+                    GroupBox gbIslemListe = (GroupBox)solPanel.Controls["grpBoxIslemListe"];
+                    foreach (Control item in gbIslemListe.Controls)
+                    {
+                        if(item is Button)
+                        {
+                            item.Enabled = true;
+                        }
+                    }
+                    MessageBox.Show("Merhaba " + kontrolKullanici.kullaniciAdi, "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı kullanıcı adı veya şifre", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlIslemListesi = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpBoxIslemListe = new System.Windows.Forms.GroupBox();
-            this.btnYeniKayit = new System.Windows.Forms.Button();
-            this.btnKayitListe = new System.Windows.Forms.Button();
             this.btnUygulamaKapat = new System.Windows.Forms.Button();
+            this.btnKayitListe = new System.Windows.Forms.Button();
+            this.btnYeniKayit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblZaman = new System.Windows.Forms.Label();
             this.tmZamanla = new System.Windows.Forms.Timer(this.components);
             this.pnlIslemListesi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpBoxIslemListe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,16 +56,6 @@
             this.pnlIslemListesi.TabIndex = 1;
             this.pnlIslemListesi.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlIslemListesi_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 191);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // grpBoxIslemListe
             // 
             this.grpBoxIslemListe.Controls.Add(this.btnUygulamaKapat);
@@ -78,14 +68,15 @@
             this.grpBoxIslemListe.TabStop = false;
             this.grpBoxIslemListe.Text = "İşlem Listesi";
             // 
-            // btnYeniKayit
+            // btnUygulamaKapat
             // 
-            this.btnYeniKayit.Location = new System.Drawing.Point(6, 21);
-            this.btnYeniKayit.Name = "btnYeniKayit";
-            this.btnYeniKayit.Size = new System.Drawing.Size(175, 29);
-            this.btnYeniKayit.TabIndex = 0;
-            this.btnYeniKayit.Text = "Yeni Kayıt";
-            this.btnYeniKayit.UseVisualStyleBackColor = true;
+            this.btnUygulamaKapat.Location = new System.Drawing.Point(6, 91);
+            this.btnUygulamaKapat.Name = "btnUygulamaKapat";
+            this.btnUygulamaKapat.Size = new System.Drawing.Size(175, 29);
+            this.btnUygulamaKapat.TabIndex = 2;
+            this.btnUygulamaKapat.Text = "Uygulamayı Kapat";
+            this.btnUygulamaKapat.UseVisualStyleBackColor = true;
+            this.btnUygulamaKapat.Click += new System.EventHandler(this.btnUygulamaKapat_Click);
             // 
             // btnKayitListe
             // 
@@ -96,14 +87,24 @@
             this.btnKayitListe.Text = "Kayıt Listele";
             this.btnKayitListe.UseVisualStyleBackColor = true;
             // 
-            // btnUygulamaKapat
+            // btnYeniKayit
             // 
-            this.btnUygulamaKapat.Location = new System.Drawing.Point(6, 91);
-            this.btnUygulamaKapat.Name = "btnUygulamaKapat";
-            this.btnUygulamaKapat.Size = new System.Drawing.Size(175, 29);
-            this.btnUygulamaKapat.TabIndex = 2;
-            this.btnUygulamaKapat.Text = "Uygulamayı Kapat";
-            this.btnUygulamaKapat.UseVisualStyleBackColor = true;
+            this.btnYeniKayit.Location = new System.Drawing.Point(6, 21);
+            this.btnYeniKayit.Name = "btnYeniKayit";
+            this.btnYeniKayit.Size = new System.Drawing.Size(175, 29);
+            this.btnYeniKayit.TabIndex = 0;
+            this.btnYeniKayit.Text = "Yeni Kayıt";
+            this.btnYeniKayit.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 191);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -136,8 +137,8 @@
             this.Text = "Todo - Uygulaması 2023";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlIslemListesi.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpBoxIslemListe.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

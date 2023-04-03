@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="businessService\kullaniciServis.cs" />
     <Compile Include="database\sanalDatabase.cs" />
     <Compile Include="entities\kullanici.cs" />
     <Compile Include="entities\todo.cs" />
